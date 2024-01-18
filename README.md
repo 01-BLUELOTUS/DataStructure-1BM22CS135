@@ -13,3 +13,9 @@ The program should print appropriate messages for queue empty and queue overflow
 <h1>LABORATORY PROGRAM-3(B)</h1>
 <h3>WAP to simulate the working of a circular queue of integers using an array. Provide the following operations: Insert, Delete & Display
 The program should print appropriate messages for queue empty and queue overflow conditions</h3>
+<h1>LABORATORY PROGRAM-4</h1>
+<h3>WAP to Implement Singly Linked List with following operations
+a) Create a linked list.
+b) Insertion of a node at first position, and at end of list.
+c) Delete a node at front and at the end of the list.
+d) Display the contents of the linked list.</h3>
