@@ -19,3 +19,7 @@ a) Create a linked list.
 b) Insertion of a node at first position, and at end of list.
 c) Delete a node at front and at the end of the list.
 d) Display the contents of the linked list.</h3>
+<h1>LABORATORY PROGRAM-5(A)</h1>
+<h3>WAP to Implement Single Link List with following operations: Sort the linked list, Reverse the linked list, Concatenation of two linked lists.</h3>
+<h1>LABORATORY PROGRAM-5(B)</h1>
+<h3>WAP to Implement Single Link List to simulate Stack & Queue Operations.</h3>
