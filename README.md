@@ -31,3 +31,14 @@ a) Create a linked list.
 b) Insertion of a node at first position, and at end of list and at any position
 c) Delete a node at front and at the end of the list and at any position
 d) Display the contents of the linked list.</h3>
+<h1>LABORATORY PROGRAM-6(A)</h1>
+<h3>WAP to Implement Single Link List with following operations: Sort the linked list, Reverse the linked list,
+Concatenation of two linked lists.</h3>
+<h1>LABORATORY PROGRAM-6(B)</h1>
+<h3>WAP to Implement Single Link List to simulate Stack &amp; Queue Operations.</h3>
+<h1>LABORATORY PROGRAM-7</h1>
+<h3>WAP to Implement doubly link list with primitive operations
+a) Create a doubly linked list.
+b) Insert a new node to the left of the node.
+c) Delete the node based on a specific value
+d) Display the contents of the list</h3>
