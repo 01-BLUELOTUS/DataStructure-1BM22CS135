@@ -42,3 +42,9 @@ a) Create a doubly linked list.
 b) Insert a new node to the left of the node.
 c) Delete the node based on a specific value
 d) Display the contents of the list</h3>
+<h1>LABORATORY PROGRAM-8</h1>
+<h3>8. Write a program
+a) To construct a binary Search tree.
+b) To traverse the tree using all the methods i.e., in-order, preorder and post order
+c) To display the elements in the tree.
+d) Also perform finding the immediate predecessor and immediate successor in inorder traversal using BST.</h3>
