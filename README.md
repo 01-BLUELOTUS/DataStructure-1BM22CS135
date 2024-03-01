@@ -48,3 +48,16 @@ a) To construct a binary Search tree.
 b) To traverse the tree using all the methods i.e., in-order, preorder and post order
 c) To display the elements in the tree.
 d) Also perform finding the immediate predecessor and immediate successor in inorder traversal using BST.</h3>
+<h1>LABORATORY PROGRAM-9</h1>
+<h3>Given a File of N employee records with a set K of Keys(4-digit) which uniquely determine
+the records in file F.
+Assume that file F is maintained in memory by a Hash Table (HT) of m memory locations
+with L as the set of memory addresses (2-digit) of locations in HT.
+Let the keys in K and addresses in L are integers.
+Design and develop a Program in C that uses Hash function H: K -&gt; L as H(K)=K mod m
+(remainder method), and implement hashing technique to map a given key K to the address
+space L.
+Resolve the collision (if any) using
+i. linear probing
+ii. Quadratic Probing
+iii. Double Hashing</h3>
