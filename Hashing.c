@@ -7,111 +7,108 @@
 typedef struct
 {
     int key;
-}emp;
+} emp;
 
 typedef struct
 {
     int key;
-}tableEntry;
+} tableEntry;
 
 int hashfun(int key)
 {
-    return key%MAXTAB ;
+    return key % MAXTAB;
 }
 
 void linearProbing(emp employee[], tableEntry table[], int key)
 {
 
     int index = hashfun(key);
-    while(table[index].key!=-1)
+    while (table[index].key != -1)
     {
-        index = (index+1)%MAXTAB;
-    }
-    table[index].key = key;
- }
-
-void quadraticProbing(emp employee[], tableEntry table[],int key)
-{
-    int index = hashfun(key);
-    int i=1;
-    while(table[index].key!=-1)
-    {
-        index = (index+ i + (i*i))%MAXTAB;
-        i++ ;
+        index = (index + 1) % MAXTAB;
     }
     table[index].key = key;
 }
 
-void doubleHashing(emp employee[], tableEntry table[],int key)
+void quadraticProbing(emp employee[], tableEntry table[], int key)
 {
     int index = hashfun(key);
-    int i=1;
-    int hash2 = (MAXTAB-2) - key % (MAXTAB-2);
-    while(table[index].key!=-1)
+    int i = 1;
+    while (table[index].key != -1)
     {
-        index = (index+hash2*1)%MAXTAB;
-        i++ ;
+        index = (index + i + (i * i)) % MAXTAB;
+        i++;
+    }
+    table[index].key = key;
+}
+
+void doubleHashing(emp employee[], tableEntry table[], int key)
+{
+    int index = hashfun(key);
+    int i = 1;
+    int hash2 = (MAXTAB - 2) - key % (MAXTAB - 2);
+    while (table[index].key != -1)
+    {
+        index = (index + hash2 * i) % MAXTAB;
+        i++;
     }
     table[index].key = key;
 }
 
 void print(tableEntry table[])
 {
-    for (int i = 0;i<MAXTAB;i++)
+    for (int i = 0; i < MAXTAB; i++)
     {
-        if(table[i].key!=-1)
+        if (table[i].key != -1)
         {
-            printf("Hash: %d, key: %d\n",i,table[i].key);
+            printf("Hash: %d, key: %d\n", i, table[i].key);
         }
-     }
- }
+    }
+}
 
 int main()
 {
-    emp employee[MAXTAB];
+    emp employee[MAX];
     tableEntry table[MAXTAB];
-    int num;
-    for(int i = 0;i<MAXTAB;i++)
+    int num, choice;
+
+    for (int i = 0; i < MAXTAB; i++)
     {
         table[i].key = -1;
     }
+
     printf("--------------------------------------------\n");
-    printf("Linear Probing Collision Technique\n");
+    printf("Collision Techniques\n");
+    printf("1. Linear Probing\n");
+    printf("2. Quadratic Probing\n");
+    printf("3. Double Hashing\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
     printf("Enter the Number of Employees: ");
-    scanf("%d",&num);
-    for(int i = 0;i<num;i++)
+    scanf("%d", &num);
+    for (int i = 0; i < num; i++)
     {
-        printf("Enter the ID of %d employee ",(i+1));
-        scanf("%d",&employee[i].key);
-        linearProbing(employee, table, employee[i].key);
+        printf("Enter the ID of %d employee ", (i + 1));
+        scanf("%d", &employee[i].key);
+        switch (choice)
+        {
+        case 1:
+            linearProbing(employee, table, employee[i].key);
+            break;
+        case 2:
+            quadraticProbing(employee, table, employee[i].key);
+            break;
+        case 3:
+            doubleHashing(employee, table, employee[i].key);
+            break;
+        default:
+            printf("Invalid choice!\n");
+            return 1;
+        }
     }
-    printf("The Linear Probing Hashing Table:\n");
-    print(table);
-    printf("\n");
-    printf("--------------------------------------------\n");
-    printf("Quadratic Probing Collision Technique\n");
-    printf("Enter the Number of Employees: ");
-    scanf("%d",&num);
-    for(int i = 0;i<num;i++)
-    {
-        printf("Enter the ID of %d employee ",(i+1));
-        scanf("%d",&employee[i].key);
-        quadraticProbing(employee, table, employee[i].key);
-    }
-    printf("The Quadratic Probing Hashing Table:\n");
-    print(table);
-    printf("\n");
-    printf("--------------------------------------------\n");
-    printf("Double Hashing Collision Technique\n");
-    printf("Enter the Number of Employees: ");
-    scanf("%d",&num);
-    for(int i = 0;i<num;i++)
-    {
-        printf("Enter the ID of %d employee ",(i+1));
-        scanf("%d",&employee[i].key);
-        doubleHashing(employee, table, employee[i].key);
-    }
-    printf("The Linear Probing Hashing Table:\n");
+
+    printf("The Hashing Table:\n");
     print(table);
     printf("\n");
     printf("--------------------------------------------\n");
