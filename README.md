@@ -61,3 +61,7 @@ Resolve the collision (if any) using
 i. linear probing
 ii. Quadratic Probing
 iii. Double Hashing</h3>
+<h1>LABORATORY PROGRAM-10(A)</h1>
+<h3>Write a program to traverse a graph using BFS method.</h3>
+<h1>LABORATORY PROGRAM-10(B)</h1>
+<h3>Write a program to check whether given graph is connected or not using DFS method.</h3>
